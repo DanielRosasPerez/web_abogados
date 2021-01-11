@@ -1,0 +1,533 @@
+/* ESTILOS GENERALES: */
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+/* Modificando Modelo de Cajas CSS: */
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/* Reseteando Margenes y Padding: */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Aplicando estilos al elemento "body": */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem; /*18px/16px = 1.125rem o em.*/
+    margin: auto; /*Para centrar al contenedor "body" dentro del contenedor principal "html".*/
+}
+
+/* Dando formato al contenedor flexible: */
+.container{
+    width: 90%;
+    max-width: 1366px;
+    margin: 0 auto; /*0 = Para que no existan margenes entre los distintos contenedores (superiores e inferiores). auto = Para centrar de manera automática al contenedor.*/
+}
+
+p{ /* Justificamos el texto dentro de los parráfos. */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* CABECERA PRINCIPAL: */
+#Principal{
+    background-color: rgb(2, 2, 85);
+}
+
+#cabecera{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#logo{
+    flex-basis: 50%;
+}
+
+#Contacto{
+    flex-basis: 50%;
+    margin: auto;
+    font-size: 1rem;/*16px*/
+}
+
+#Contacto > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Contacto > ul > li > a{
+    /*display: inline-block;*/
+    float: left;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 5%;
+}
+
+#Contacto > ul > li > a:hover{
+    text-decoration: underline;
+}
+
+#Contacto > ul > li > i{
+    background-color: #ffa600;
+    color: #020255;
+    padding: 0.5% 0.5%;
+    border-radius: 10%;
+}
+
+span{
+    color: #ffa600;
+}
+
+/*Cabecera Secundaria:*/
+#H_secundaria{
+    background-color: #ffa600;
+}
+
+#H_s2 > h1{
+    color: #fff;
+}
+
+#H_s2{
+    padding: 3% 0;
+}
+
+/* CONTENIDO FIRMA: */
+
+/*Contenido:*/
+#ContenedorPrincipal{
+    display: flex;
+    flex-flow: row wrap; /*En este caso no es necesaria esta propiedad dado que la información no abarca más de una fila, por lo tanto no hay nada que envolver dentro del elemento contenedor.*/
+    margin: 3% auto 8% auto;
+}
+
+#PrimerContenidoFirma{
+    flex-basis: 70%;
+}
+
+#PrimerContenidoFirma > p{
+    margin: 3% 0;
+    line-height: 1.5;
+    text-align: justify;
+    padding-right: 3%;
+}
+
+/*Aside:*/
+
+aside > h2{
+    background-color: rgb(236, 236, 236);
+    font-size: 1.2rem;
+    padding: 3% 0;
+    margin-bottom: 8%;
+    padding-left: 2%;
+}
+
+#enlaces_aside{
+    margin-bottom: 8%;
+}
+
+#enlaces_aside > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#enlaces_aside > ul > li > a{
+    font-size: 0.9rem;
+    font-weight: 900;
+    line-height: 2;
+    color: #0b126c;
+    text-decoration: none;
+}
+
+#enlaces_aside > ul > li > a:hover{
+    text-decoration: underline;
+}
+
+#redes_sociales{
+    font-size: 2.5rem;
+    margin-bottom: 8%;
+}
+
+#redes_sociales > a{
+    display: inline-block;
+    margin-right: 10%;
+    color: #020255;
+}
+
+aside > p{
+    font-size: 0.85rem;
+    text-align: justify;
+    margin-bottom: 6%;
+}
+
+label[for="UserMail"]{
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 900;
+    margin-bottom: 5%;
+}
+
+input[type="email"]{
+    display: block;
+    border: 1px solid rgb(224, 224, 224);
+    width: 100%;
+    padding: 4% 0;
+    margin-bottom: 5%;
+}
+
+button[type="submit"]{
+    display: block;
+    border: 1px solid #4caf50;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 4% 12%;
+    margin-left: 100%;
+    transform: translateX(-100%);
+    width: max-content;
+    cursor: pointer;
+}
+
+/* CONTENIDO ÁREAS: */
+
+/*Contenido Central*/
+
+/*Imagenes y Texto*/
+#ContenidoUnoAreas{
+    flex-basis: 70%;
+}
+
+#area{
+    width: 100%;
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+img.Equipo{
+    border-radius: 5%;
+}
+
+#img{
+    flex-basis: 40%;
+}
+
+#texto{
+    flex-basis: 50%;
+    padding-left: 3%;
+}
+
+#texto > h3{
+    margin-bottom: 5%;
+}
+
+#texto > p{
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 5%;
+    font-size: 1rem;
+}
+
+#texto > a{
+    display: block;
+    font-size: 1rem;
+    width: max-content;
+    border: 2px solid #ffa600;
+    padding: 3% 20%;
+    text-decoration: none;
+    color: #000;
+}
+
+#texto > a:hover{
+    background-color: #ffa600;
+    color: #fff;
+    text-decoration: underline;
+    transition: all 0.2s 0s ease-in-out;
+}
+
+/*Aside*/
+aside{
+    flex-basis: 30%;
+}
+
+#ContenedorAside > h2{
+    font-size: 1.2rem;
+    background-color: rgb(236, 236, 236);
+    padding: 3% 0 3% 2%;
+    margin-bottom: 8%;
+}
+
+input[id="UserMail"]{
+    display: block;
+    border: 1px solid rgb(224, 224, 224);
+    width: 100%;
+    padding: 4% 0;
+    margin-bottom: 5%;
+}
+
+button[id="form"]{
+    display: block;
+    border: 1px solid #4caf50;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 4% 12%;
+    margin-left: 100%;
+    transform: translateX(-100%);
+    width: max-content;
+    cursor: pointer;
+}
+
+/* CONTENIDO CASOS DE ESTUDIO: */
+
+/*Contenedor Principal:*/
+/*Contenido*/
+#ContenedorFlex{
+    flex-basis: 70%;
+}
+
+#caso_e > p{
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 3% 0;
+}
+
+#boton{
+    display: block;
+    font-size: 1rem;
+    border: 2px solid #ffa600;
+    width: max-content;
+    padding: 1.5% 10%;
+    
+}
+
+#boton > a{
+    text-decoration: none;
+    color: black;
+}
+
+#boton > a:hover{
+    text-decoration: underline;
+    color: green;
+}
+
+#caso_e{
+    margin-bottom: 6%;
+}
+
+#ContenedorAside > p{
+    font-size: 0.85rem;
+    text-align: justify;
+    margin-bottom: 6%;
+}
+
+/* CONTENIDO CONTACTO: */
+
+/*Contenedor Principal:*/
+/*Formulario*/
+
+#formulario{
+    flex-basis: 70%;
+    padding: 2%;
+}
+
+#formulario > h3{
+    margin-bottom: 3%;
+}
+
+#formulario > p{
+    font-size: 1rem;
+    padding: 0.25% 0;
+}
+
+#formulario > form > label{
+    font-size: 1rem;
+    font-weight: 900;
+    display: block;
+    margin: 3% 0 2% 0;
+}
+
+#formulario > form > input:not(last-child){
+    border: 1px solid rgb(192, 192, 192);
+    padding: 2% 0;
+    width: 100%;
+}
+
+#instruccion{
+    display: block;
+    font-size: 1rem;
+    margin: 3% 0 2% 0;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid rgb(109, 109, 109);
+}
+
+#terminos{
+    margin: 3% 0 3% 0;
+}
+
+input[type="checkbox"]{
+    display: inline-block;
+    border: 1px solid black;
+}
+
+button[id="contactof"]{
+    background-color: #4caf50;
+    border: 1px solid #4caf50;
+    color: #fff;
+    width: 100%;
+    font-weight: 900;
+    font-size: 1.15rem;
+    padding: 1.5% 0;
+}
+
+button[id="contactof"]:hover{
+    cursor: pointer;
+}
+
+/* CONTENIDO EQUIPO: */
+
+/*Contenido:*/
+#SeccionUno{
+    margin-top: 3%;
+    /*margin-bottom: 6%;*/
+}
+
+#ContenedorPrincipalEquipo{
+    width: 70%;
+    float: left;
+    margin-bottom: 3%;
+}
+
+#col{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6%;
+}
+
+#Img{
+    flex-basis: 50%;
+}
+
+img{
+    border-radius: 2.5%;
+}
+
+#textoEquipo{
+    flex-basis: 50%;
+    padding: 0.5% 2% 0 2%; 
+}
+
+#textoEquipo > p{
+    margin: 3% 0% 3% 0%; 
+}
+
+#textoEquipo > i{
+    display: block;
+    font-size: 1rem;
+    color: #020255;
+    margin: 0% 0% 4% 0%;
+}
+
+#textoEquipo > i > a{
+    text-decoration: none;
+    color: #020255;
+}
+
+#textoEquipo > i > a:hover{
+    text-decoration: underline;
+}
+
+/*Aside:*/
+#Right{
+    width: 30%;
+    float: right;
+}
+
+#Right > h2{
+    background-color: rgb(236, 236, 236);
+    font-size: 1.2rem;
+    padding: 3% 0;
+    margin-bottom: 8%;
+    padding-left: 2%;
+}
+
+#Right > p{
+    font-size: 0.85rem;
+    text-align: justify;
+    margin-bottom: 6%;
+}
+
+/* FOOTER */
+footer{
+    background-color: rgb(27, 27, 27);
+    clear: both;
+}
+
+#PiedePagina{
+    color: white;
+    padding: 3% 0% 0.5% 0%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#columnaf{
+    flex-basis: 33%;
+    margin-bottom: 6%;
+}
+
+#columnaf > a > img{
+    display: block;
+    margin-left: 100%;
+    transform: translateX(-93%); /*La imagen esta mal cortada, por eso el porcentaje, lo correcto sería que estuviese a -100%. No repetir, mala práctica.*/
+}
+
+#columnaf > #iconos_f{
+    text-align: right;
+}
+
+#iconos_f a i{
+    display: inline-block;
+    margin-left: 6%;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#columnaf h4{
+    margin-bottom: 6%;
+    font-size: 0.88rem;
+}
+
+#columnaf a {
+    text-decoration: none;
+}
+
+#columnaf a > p{
+    margin-bottom: 4%;
+    font-size: 0.85rem;
+    color: #fff;
+    width: max-content;
+}
+
+#columnaf a > p:hover{
+    text-decoration: underline;
+}
+
+#copyright{
+    border-top: 1px solid white;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5%;
+}

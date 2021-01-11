@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% block title %}Áreas{% endblock %}
+{% load static %}
+{% block subtitle %}ÁREAS{% endblock %}
+{% block content %}
+<div id="ContenidoUnoAreas">
+    <div id="area">
+        <div id="img">
+            <img style="width:100%; height:100%;" src="{% static 'core/img/lady-justice.jpg' %}" alt="justicia">
+        </div>
+        <div id="texto">
+            <h3>Derecho Penal</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Corporis, excepturi sapiente, aujd plelw sdñkj.</p>
+            <a href="">Leer más</a>
+        </div>
+    </div>
+    <div id="area">
+        <div id="img">
+            <img style="width:100%; height:100%;" src="{% static 'core/img/construction-workers.jpeg' %}" alt="constructores">
+        </div>
+        <div id="texto">
+            <h3>Derecho Laboral</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Corporis, excepturi sapiente, aujd plelw sdñkj.</p>
+            <a href="">Leer más</a>
+        </div>
+    </div>
+    <div id="area">
+        <div id="img">
+            <img style="width:100%; height:100%;" src="{% static 'core/img/office-workers.jpg' %}" alt="empleados">
+        </div>
+        <div id="texto">
+            <h3>Derecho Corporativo</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Corporis, excepturi sapiente, aujd plelw sdñkj.</p>
+            <a href="">Leer más</a>
+        </div>
+    </div>
+    <div id="area">
+        <div id="img">
+            <img style="width:100%; height:100%;" src="{% static 'core/img/house.jpeg' %}" alt="casa">
+        </div>
+        <div id="texto">
+            <h3>Derecho Inmobiliario</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Corporis, excepturi sapiente, aujd plelw sdñkj.</p>
+            <a href="">Leer más</a>
+        </div> 
+    </div>
+</div>
+{% endblock %}

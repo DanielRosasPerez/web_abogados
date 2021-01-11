@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>{% block title %}{% endblock %}</title>
+        
+        {% load static %}
+        <!-- Estilos -->
+        {% if request.path != '/' %}
+            <link href="{% static 'core/css/estilos_pagshijos.css' %}" rel="stylesheet">
+        {% else %}
+            <link href="{% static 'core/css/estilos_home.css' %}" rel="stylesheet">
+        {% endif %}
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <!-- Icon Fonts -->
+        <link href="{% static 'core/Iconos/fontawesome-free-5.10.2-web/css/all.css' %}" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'core/img/favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/img/favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'core/img/favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'core/img/favicon/site.webmanifest' %}">
+        <link rel="mask-icon" href="{% static 'core/img/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+    <body>
+
+        <!-- Cabecera -->
+        <header id="Principal">
+            <div id="cabecera" class="container">
+                <div id="logo">
+                    <a href="Sto-Corp.html"><img src="{% static 'core/img/logo.png' %}" alr="FirmaLegar"></a>
+                </div>
+                <div id="Contacto">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'firma' %}">Firma</a></li>
+                        <li><a href="{% url 'areas' %}">Áreas</a></li>
+                        <li><a href="{% url 'equipo' %}">Equipo</a></li>
+                        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                        <li><i class="fas fa-phone"></i> <span>55-38-79-44-55</span> </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido Principal -->
+        {% if request.path != '/' %}
+            <main>
+                <header id="H_secundaria">
+                    <div id="H_s2" class="container">
+                        <h1>{% block subtitle %}{% endblock %}</h1>
+                    </div>
+                </header>
+                <article>
+                    <section>
+                        <div id="ContenedorPrincipal" class="container">
+                        <!-- Contenido Páginas Hijo -->
+                            {% block content %}
+                            {% endblock%}
+                        <!-- Aside -->
+                            <aside>
+                                <div id="ContenedorAside">
+                                    <h2>Casos de Estudio</h2>
+                                    <div id="enlaces_aside">
+                                        <ul>
+                                            <li><a href="{% url 'casos' %}">Lorem ipsum asñdlkjfjas añlsdkj</a></li>
+                                            <li><a href="{% url 'casos' %}">Lorem ipsum asñdlkjfjas añlsdkj</a></li>
+                                            <li><a href="{% url 'casos' %}">Lorem ipsum asñdlkjfjas añlsdkj</a></li>
+                                            <li><a href="{% url 'casos' %}">Lorem ipsum asñdlkjfjas añlsdkj</a></li>
+                                            <li><a href="{% url 'casos' %}">Lorem ipsum asñdlkjfjas añlsdkj</a></li>
+                                        </ul>
+                                    </div>
+                                    <h2>Redes Sociales</h2>
+                                    <div id="redes_sociales">
+                                        <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-square"></i> </a>
+                                        <a href="https://twitter.com/?lang=es" target="_blank"> <i class="fab fa-twitter-square"></i> </a>
+                                        <a href="https://mx.linkedin.com/" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+                                    </div>
+                                    <h2>Newsletter</h2>
+                                    <p>Para recibir información sobre temas legales, ingrese su correo.</p>
+                                    <div id="formulario">
+                                        {% include 'core/form_correo.html' with form=form %}
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </section>
+                </article>
+            </main>
+        
+        {% else %}
+            {% block home_content %}
+            {% endblock %}
+        {% endif %}
+
+        <!-- Footer -->
+        <footer>
+            <div id="PiedePagina" class="container">
+                <div id="columnaf">
+                    <h4>CORPORATIVO</h4>
+                    <a href="#"><p>Socios</p></a>
+                    <a href="#"><p>Trabaja con nostros</p></a>
+                    <a href="#"><p>Contacto</p></a>
+                </div>
+                <div id="columnaf">
+                    <h4>LEGAL</h4>
+                    <a href="#"><p>Términos y condiciones</p></a>
+                    <a href="#"><p>Política de privacidad</p></a>
+                </div>
+                <div id="columnaf">
+                    <a href="Sto-Corp.html"> <img src="{% static 'core/img/logo.png' %}" alr="FirmaLegar"> </a>
+                    <div id="iconos_f">
+                        <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-square"></i> </a>
+                        <a href="https://twitter.com/?lang=es" target="_blank"> <i class="fab fa-twitter-square"></i> </a>
+                        <a href="https://mx.linkedin.com/" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+                    </div>
+                </div>
+                <div id="copyright">
+                    <small>
+                        &copy Todos los derechos reservados.
+                    </small>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

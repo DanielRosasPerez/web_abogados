@@ -1,0 +1,9 @@
+{% if "ok" in request.GET %}
+    <p style="font-size:12px; color:green; margin-bottom:6%;"><i>La información se ha enviado satisfactoriamente.</i></p>
+{% endif %}
+<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <label for="UserMail">Correo Electrónico:</label>
+    {{form.email}}
+    <!-- <input type="email" name="" placeholder="daniel123@gmail.com" style="padding-left: 1%;"> -->
+    <button type="submit" style="font-size:1rem">Eviar datos</button>
+</form>

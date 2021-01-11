@@ -1,0 +1,651 @@
+/* APLICANDO ESTILOS GENERALES */
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+/* MODIFICAR MODELO DE CAJAS */
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* RESETEAR MARGENES Y PADDING */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* APLICAR FORMATO AL ELEMENTO BODY */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem; /*18px/16px = 1.125rem o em.*/
+    margin: auto; /*Para central el contenido dentro del elemento html.*/
+    box-sizing: border-box;
+}
+
+/* CONTENEDORES PRINCIPALES */
+.container{
+    width: 90%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+/* APLICACIÓN DE ESTILOS A LOS ELEMENTOS DE LA PÁGINA */
+
+/* CABECERA: */
+#Principal{
+    background-color: rgb(2, 2, 85);
+}
+
+#cabecera{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#logo{
+    flex-basis: 50%;
+}
+
+#Contacto{
+    flex-basis: 50%;
+    margin: auto;
+    font-size: 1rem;/*16px*/
+}
+
+#Contacto > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Contacto > ul > li > a{
+    /*display: inline-block;*/
+    float: left;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 5%;
+}
+
+#Contacto > ul > li > a:hover{
+    text-decoration: underline;
+}
+
+#Contacto > ul > li > i{
+    background-color: #ffa600;
+    color: #020255;
+    padding: 0.5% 0.5%;
+    border-radius: 10%;
+}
+
+span{
+    color: #ffa600;
+}
+
+/*SECCIÓN UNO*/
+article > section:first-child{
+    background-image: url(../img/gavel-book.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#SeccionUno{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(15, 8, 37, 0.8);
+}
+
+#texto_principal{
+    color: #fff;
+    text-align: center;
+    padding: 12% 0% 12% 0%;
+}
+
+#texto_principal > h1{
+    font-size: 3.4rem;
+    font-weight: bold;
+}
+
+#texto_principal > h3{
+    margin: 2.5% auto;
+}
+
+#texto_principal > p > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#texto_principal > p{
+    border: 1px solid #fff;
+    font-weight: 900;
+    padding: 1.3% 4%;
+    width: max-content;
+    margin: auto;
+}
+
+#texto_principal > p > a:hover{
+    text-decoration: underline;
+}
+
+/*SECCIÓN DOS*/
+#SeccionDos{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 6% auto;
+}
+
+#SeccionDos #texto{
+    flex-basis: 60%;
+    padding-right: 3%;
+    padding-top: 3%;
+}
+
+#SeccionDos #Img{
+    flex-basis: 40%;
+}
+
+#texto h2{
+    margin-bottom: 3.8%;
+}
+
+#texto p{
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 2%;
+}
+
+#texto a{ /*OBSERVAR COMO SE COMPORTA ESTE TIPO DE ALINEACIÓN EN "RESPONSIVE DESIGN". */
+    /*display: block;*/
+    display: inline-block;
+    background-color: #ffa600;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 2% 10%;
+    /*width: max-content;
+    margin: auto;*/
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SECCIÓN TRES */
+#SeccionTres{
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 6%;
+}
+
+#SeccionTres #img_s3{
+    flex-basis: 50%;
+}
+
+#SeccionTres #texto_s3{
+    flex-basis: 50%;
+    padding: 4.5% 2% 0% 3.5%;
+}
+
+#texto_s3 h2{
+    margin-bottom: 4%;
+    font-size: 1.25rem;
+    text-align: justify;
+    padding-right: 15%;
+}
+
+#texto_s3 p{
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 8%;
+}
+
+#texto_s3 a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #ffa600;
+    padding: 2% 6%;
+    width: max-content;
+    background-color: #ffa600;
+}
+
+/* SECCIÓN CUATRO */
+article > section:nth-child(4) > h2{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+article > section:nth-child(4) > p{
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+#SeccionCuatro{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 8%;
+}
+
+#columna4{
+    flex-basis: 25%;
+    padding: 0% 1.2%;
+}
+
+#columna4 i{
+    font-size: 3rem;
+    color: #ffa600;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 8%;
+}
+
+#columna4 h3{
+    color: rgb(94, 94, 94);
+    font-size: 1.2rem;
+    margin: 4% auto;
+    text-align: center;
+}
+
+#columna4 p{
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+/* SECCIÓN CINCO */
+article > section:last-child{
+    background-color: rgb(238, 238, 238);
+}
+
+#SeccionCinco{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 5% 0;
+}
+
+#texto_s5{
+    flex-basis: 80%;
+}
+
+#enlace{
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#texto_s5 h2{
+    font-size: 1.4rem;
+    margin-bottom: 2.5%;
+}
+
+#texto_s5 p{
+    font-size: 1.1rem;
+}
+
+#enlace a{
+    background-color: #ffa600;
+    text-decoration: none;
+    padding: 6% 30%;
+    color: white;
+}
+
+/* FOOTER */
+footer{
+    background-color: rgb(27, 27, 27);
+}
+
+#PiedePagina{
+    color: white;
+    padding: 3% 0% 0.5% 0%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#columnaf{
+    flex-basis: 33%;
+    margin-bottom: 6%;
+}
+
+#columnaf > a > img{
+    display: block;
+    margin-left: 100%;
+    transform: translateX(-93%); /*La imagen esta mal cortada, por eso el porcentaje, lo correcto sería que estuviese a -100%. No repetir, mala práctica.*/
+}
+
+#columnaf > #iconos_f{
+    text-align: right;
+}
+
+#iconos_f a i{
+    display: inline-block;
+    margin-left: 6%;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#columnaf h4{
+    margin-bottom: 6%;
+    font-size: 0.88rem;
+}
+
+#columnaf a {
+    text-decoration: none;
+}
+
+#columnaf a > p{
+    margin-bottom: 4%;
+    font-size: 0.85rem;
+    color: #fff;
+    width: max-content;
+}
+
+#columnaf a > p:hover{
+    text-decoration: underline;
+}
+
+#copyright{
+    border-top: 1px solid white;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5%;
+}
+
+/* MEDIAQUERIES: */
+
+@media screen and (max-width: 900px){
+    #texto_principal > h1 {
+        font-size: 3rem;
+    }
+
+    #SeccionDos {
+        border: 1px solid rgb(221, 221, 221);
+        padding: 0 1% 2% 1%;
+        border-radius: 2%;
+    }
+
+    #SeccionDos #texto {
+        flex-basis: 100%;
+    }
+
+    #SeccionDos #Img {
+        flex-basis: 80%;
+        margin: 3% auto 0 auto;
+    }
+
+    #SeccionTres {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    #SeccionTres #img_s3 {
+        flex-basis: 80%;
+        margin: auto;
+    }
+
+    #SeccionTres #texto_s3 {
+        flex-basis: 100%;
+    }
+
+    #texto_s3 a {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 750px){
+    #texto_principal > h1 {
+        font-size: 2.5rem;
+    }
+
+    #texto_principal > h3 {
+        font-size: 1rem;
+    }
+
+    #texto_principal > p > a {
+        font-size: 1rem;
+    }
+
+    #texto h2 {
+        font-size: 1.5rem;
+    }
+
+    #texto p {
+        font-size: 1rem;
+    }
+
+    #texto a {
+        font-size: 1rem;
+    }
+
+    #texto_s3 p {
+        font-size: 1rem;
+    }
+
+    #texto_s3 a {
+        font-size: 1rem;
+    }
+
+    #texto_s5 h2 {
+        font-size: 1rem;
+    }
+
+    #texto_s5 h2 {
+        font-size: 1rem;
+    }
+
+    #enlace{
+        align-items: self-end;
+    }
+
+    #enlace a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 710px){
+    #Contacto{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    #Contacto > ul{
+        flex-basis: 100%;
+    }
+    
+    #cel{
+        flex-basis: 100%;
+    }
+
+    #Contacto ul li:last-child {
+        font-size: 0.9rem;
+    }
+
+    #Contacto i {
+        margin-left: 3%;
+    }
+}
+
+@media screen and (max-width: 653px){
+    #PiedePagina{
+        justify-content: center;
+    }
+
+    #columnaf > a > img {
+        display: block;
+        margin-left: 100%;
+        transform: translateX(-100%);
+    }
+
+    #columnaf > #iconos_f {
+        text-align: left;
+    }
+
+    #iconos_f a i {
+        margin-left: 0;
+        margin-right: 6%;
+    }
+
+    #texto_principal > h1 {
+        font-size: 2rem;
+    }
+
+    #texto_principal > h3 {
+        font-size: 0.9rem;
+    }
+
+    #texto_principal > h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 648px){
+    #Contacto ul li:last-child {
+        font-size: 0.8rem;
+    }
+
+    #cel {
+        font-size: 1rem;
+    }
+
+    #cel > span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 624px){
+    #columna4 {
+        flex-basis: 50%;
+        padding: 0% 7.2%;
+        margin: 0 auto 6% auto;
+    }
+
+    #enlace {
+        margin: 3% auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 578){
+    #Contacto ul li:last-child {
+        font-size: 0.8rem;
+        margin-right: 18%;
+        margin-left: 0;
+    }
+
+    #Contacto i {
+        margin-left: 0%;
+    }
+
+    #enlace_cabecera{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 536px){
+    #texto_s5 p {
+        font-size: 0.9rem;
+    }
+
+    #enlace a {
+        font-size: 0.9rem;
+    }
+
+    #PiedePagina {
+        justify-content: space-between;
+    }
+
+    #texto_s5 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 414px){
+    #cabecera {
+        justify-content: center;
+    }
+
+    #cel > span {
+        font-size: 1rem;
+    }
+
+    #texto_principal > h1 {
+        font-size: 1.5rem;
+    }
+
+    #texto_principal > h3 {
+        font-size: 0.8rem;
+    }
+
+    #texto_principal > p > a {
+        font-size: 0.8rem;
+    }
+
+    #texto h2, #texto_s3 h2{
+        font-size: 1rem;
+    }
+
+    #texto p, #texto_s3 p{
+        font-size: 0.9rem;
+    }
+
+    article > section:nth-child(4) > h2{
+        font-size: 1rem;
+    }
+
+    article > section:nth-child(4) > p{
+        font-size: 0.9rem;
+    }
+
+    #columna4 h3 {
+        font-size: 1rem;
+    }
+
+    #columna4 p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 397px){
+    #columna4 {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 370px){
+    #texto_principal > h1 {
+        font-size: 1rem;
+    }
+
+    #texto_principal > h3 {
+        font-size: 0.7rem;
+    }
+
+    #texto_principal > p > a {
+        font-size: 0.7rem;
+    }
+
+    #columnaf:first-child {
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 326px){
+    #cel {
+        font-size: 0.9rem;
+    }
+
+    #cel > span {
+        font-size: 0.9rem;
+    }
+}
