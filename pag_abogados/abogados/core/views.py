@@ -4,6 +4,10 @@ from django.urls import reverse
 # NOTA: NOSOTROS EN CADA VISTA ACCEDEMOS A LOS TEMPLATES RESPECTIVOS DE CADA UNA. SIN EMBARGO, EXTENDEMOS EL TEMPLATE "base.html" A CADA UNA DE
 # ELLAS, POR LO QUE, NO ESTAMOS ACCEDIENDO NUNCA AL TEMPLATE "base.html" SINO EXTENDENDIENDOLO DIRECTAMENTE CADA ACCEDEMOS A LOS DISTINTOS TEMPLATES.
 
+# NOTA 2: En todos los campos en donde se encuentre "xxxxxxxxx@gmail.com", sustituir por tu email. Ir hasta la parte de abajo del archivo "settings.py" y agregar
+# sustituir "xxxxxxxxx@gmail.com" por tu correo y la respectiva contraseña. De esta forma, al clonar el repositorio, verás este proyecto desplegado funcionando al
+# 100%.
+
 # Create your views here.
 from .forms import EmailForm
 from django.core.mail import send_mail
@@ -17,7 +21,7 @@ def firma(request):
         if correo_form.is_valid():
             subject = "Bufet de Abogados"
             message = "Somos la mejor compañia, contamos con los mejores abogados."
-            email_emisor = "daniel020197ss@gmail.com"
+            email_emisor = "xxxxxxxxx@gmail.com"
             data = correo_form.cleaned_data
             email_destinatario = data["email"]
             send_mail(subject, message, email_emisor, [email_destinatario])
@@ -32,7 +36,7 @@ def areas(request):
         if correo_form.is_valid():
             subject = "Bufet de Abogados"
             message = "Somos la mejor compañia, contamos con los mejores abogados."
-            email_emisor = "daniel020197ss@gmail.com"
+            email_emisor = "xxxxxxxxx@gmail.com"
             data = correo_form.cleaned_data
             email_destinatario = data["email"]
             send_mail(subject, message, email_emisor, [email_destinatario])
@@ -47,7 +51,7 @@ def equipo(request):
         if correo_form.is_valid():
             subject = "Bufet de Abogados"
             message = "Somos la mejor compañia, contamos con los mejores abogados."
-            email_emisor = "daniel020197ss@gmail.com"
+            email_emisor = "xxxxxxxxx@gmail.com"
             data = correo_form.cleaned_data
             email_destinatario = data["email"]
             send_mail(subject, message, email_emisor, [email_destinatario])
@@ -64,7 +68,7 @@ def contacto(request):
         if correo_form.is_valid():
             subject = "Bufet de Abogados"
             message = "Somos la mejor compañia, contamos con los mejores abogados."
-            email_emisor = "daniel020197ss@gmail.com"
+            email_emisor = "xxxxxxxxx@gmail.com"
             data = correo_form.cleaned_data
             email_destinatario = data["email"]
             send_mail(subject, message, email_emisor, [email_destinatario])
@@ -78,8 +82,8 @@ def contacto(request):
             subject = "Tienes un nuevo cliente."
             message = f"Cliente: {data['nombre']} {data['apellido']}\nEmail: {data['correo']}\nTeléfono: {data['telefono']}\
             \nCelular: {data['celular'] if data['celular'] else 'No especificado'}\nMensaje: {data['contenido']}"
-            email_emisor = "daniel020197ss@gmail.com"
-            email_destinatario = "daniel020197ss@gmail.com"
+            email_emisor = "xxxxxxxxx@gmail.com"
+            email_destinatario = "xxxxxxxxx@gmail.com"
             send_mail(subject, message, email_emisor, [email_destinatario])
             return redirect(reverse("contacto")+"?okform")
 
@@ -96,7 +100,7 @@ def casos(request):
         if correo_form.is_valid():
             subject = "Bufet de Abogados"
             message = "Somos la mejor compañia, contamos con los mejores abogados."
-            email_emisor = "daniel020197ss@gmail.com"
+            email_emisor = "xxxxxxxxx@gmail.com"
             data = correo_form.cleaned_data
             email_destinatario = data["email"]
             send_mail(subject, message, email_emisor, [email_destinatario])
