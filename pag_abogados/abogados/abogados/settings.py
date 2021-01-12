@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '!)kd!e*4ziq8q2t#jg^0c0ckox_6%kwd0^9m(7n772dn0mnhmn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -137,7 +137,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Para mandar emails via SMTP server:
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "daniel020197ss@gmail.com"
-EMAIL_HOST_PASSWORD = "guitarras5"
+EMAIL_HOST_USER = "xxxxxxxxx@gmail.com"
+EMAIL_HOST_PASSWORD = "xxxxxxx"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
